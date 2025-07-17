@@ -12,9 +12,9 @@ spring:
     base-url: http://zipkin-server:9411
     enabled: true
   datasource:
-    url: jdbc:mysql://${MYSQL_HOST:posts-mysql}:3306/posts_db
-    username: ${MYSQL_USER:root}
-    password: ${MYSQL_PASSWORD:root}
+    url: jdbc:mysql://${posts_db_url:posts-mysql}:3306/posts_db
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       connection-timeout: 15000
